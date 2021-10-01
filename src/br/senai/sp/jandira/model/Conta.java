@@ -1,15 +1,39 @@
 package br.senai.sp.jandira.model;
 
+import br.senai.sp.jandira.lista.TipoConta;
+
 public class Conta {
 	
-	public String tipo;
+	private TipoConta tipo;
 	private String numero;
-	public String numeroAgencia;
-	public String titular;
+	private String numeroAgencia;
+	public Cliente titular;
 	private double saldo;
 	
+	//Método Construtor
 	public Conta(String numeroConta) {
 		numero = numeroConta;
+	}
+	
+	//Método para Alterar o Atributo Tipo
+	public void setTipo(TipoConta tipo) {
+		this.tipo = tipo;
+	}
+	
+	//Método para Pegar o Atributo Tipo
+	public TipoConta getTipo(){
+		return tipo;
+	}
+	
+	//Método para Alterar o Atributo numeroAgencia
+	public void setNumeroAgencia(String numeroAgencia) {
+		this.numeroAgencia = numeroAgencia;
+	}
+	
+	
+	//Método para Pegar o Atributo numeroAgencia
+	public String getNumeroAgencia() {
+		return numeroAgencia;
 	}
 	
 	public void depositar(double valorDeposito) {
